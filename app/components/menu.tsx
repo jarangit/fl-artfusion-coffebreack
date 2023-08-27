@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 type Props = {}
@@ -7,14 +8,14 @@ const Menu = (props: Props) => {
   return (
     <div className='flex justify-between my-container items-center  py-6'>
       <div>
-        <div>
+        <a href={'/'}>
           <Image
             src={'/img/logo.png'}
             alt=''
             width={200}
             height={200}
           />
-        </div>
+        </a>
       </div>
       <div className='hidden gap-10 text-xl md:flex '>
         <div className='cursor-pointer hover:underline'>Loans</div>

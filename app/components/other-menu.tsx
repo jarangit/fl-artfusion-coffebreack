@@ -45,9 +45,9 @@ const OtherMenu = (props: Props) => {
             <div className='text-2xl font-semibold'>{item.title}</div>
             <div className='flex flex-col gap-3 mt-4'>
               {item.menus.map((subItem, subKey) => (
-                <div key={subKey} className='hover:underline-offset-1 hover:underline cursor-pointer'>
+                <a href='/form-loan' key={subKey} className='hover:underline-offset-1 hover:underline cursor-pointer'>
                   {subItem}
-                </div>
+                </a>
               ))}
             </div>
           </div>

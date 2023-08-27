@@ -12,7 +12,6 @@ export default function Home() {
   };
   return (
     <main className='flex flex-col gap-24'>
-      <div id="_lg_form_"></div>
       <Banner />
       <Protect />
       <Choice />

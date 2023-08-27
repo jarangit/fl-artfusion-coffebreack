@@ -1,5 +1,6 @@
 import React from 'react'
 import AccordionItem from './acrodoin-item'
+import Image from 'next/image'
 
 type Props = {}
 const mockDataAD = [
@@ -48,7 +49,14 @@ const Asked = (props: Props) => {
             <div className='text-5xl font-semibold mb-6'>Frequently Asked Questions</div>
             <p>CoffeeBreakLoans.com is a digital platform offering a convenient way to connect you with reliable lenders or lending partners that would be able to provide you with the required funding.</p>
           </div>
-          <div>image</div>
+          <div className='mt-10'>
+            <Image
+              src={'/img/alone.png'}
+              alt=''
+             width={500}
+             height={500}
+            />
+          </div>
         </div>
         <div>
           <div className='flex flex-col gap-3 mb-6'>

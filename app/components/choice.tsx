@@ -44,7 +44,7 @@ const Choice = (props: Props) => {
           <div className='flex flex-col gap-24'>
             <div id={'1'} className='flex gap-10 relative'>
               <div className={`${activeContent === 1 && 'active-icon'} absolute left-[40px] top-[20px]`}>
-               
+
               </div>
               <div className='flex flex-col gap-6'>
                 <div className='text-4xl font-semibold'>Loans</div>
@@ -52,13 +52,31 @@ const Choice = (props: Props) => {
                   We partner with reliable, licensed lenders providing loans explicitly tailored to your needs.</div>
                 <div>
                   <ul>
-                    <li className='flex gap-3'>
-                      <div>icon</div>
-                      <div className='text-red font-bold'>Personal Loans</div>
+                    <li >
+                      <a href="/form-loan" className='flex gap-3'>
+                        <div>
+                          <Image
+                            src={'/img/user.png'}
+                            alt=''
+                            width={30}
+                            height={30}
+                          />
+                        </div>
+                        <div className='text-red font-bold hover:underline'>Personal Loans</div>
+                      </a>
                     </li>
-                    <li className='flex gap-3'>
-                      <div>icon</div>
-                      <div className='text-red font-bold'>Business Loans</div>
+                    <li >
+                      <a href="/form-loan" className='flex gap-3'>
+                        <div>
+                          <Image
+                            src={'/img/bag.png'}
+                            alt=''
+                            width={30}
+                            height={30}
+                          />
+                        </div>
+                        <div className='text-red font-bold hover:underline'>Business Loans</div>
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -66,7 +84,7 @@ const Choice = (props: Props) => {
             </div>
             <div id={'2'} className='flex gap-10 relative'>
               <div className={`${activeContent === 2 && 'active-icon'} absolute left-[40px] top-[20px]`}>
-               
+
               </div>
               <div className='flex flex-col gap-6'>
                 <div className='text-4xl font-semibold'>Insurance</div>
@@ -75,9 +93,18 @@ const Choice = (props: Props) => {
                   Choose CoffeeBreakLoans.com to protect yourself from unforeseen circumstances at affordable rates.</div>
                 <div>
                   <ul>
-                    <li className='flex gap-3'>
-                      <div>icon</div>
-                      <div className='text-red font-bold'>Car Insurance</div>
+                    <li >
+                      <a href="/form-loan" className='flex gap-3'>
+                        <div>
+                          <Image
+                            src={'/img/car.png'}
+                            alt=''
+                            width={30}
+                            height={30}
+                          />
+                        </div>
+                        <div className='text-red font-bold hover:underline'>Car Insurance</div>
+                      </a>
                     </li>
 
                   </ul>
@@ -86,7 +113,7 @@ const Choice = (props: Props) => {
             </div>
             <div id={'3'} className='flex gap-10 relative'>
               <div className={`${activeContent === 3 && 'active-icon'} absolute left-[40px] top-[20px]`}>
-               
+
               </div>
               <div className='flex flex-col gap-6'>
                 <div className='text-4xl font-semibold'>Credit Cards</div>
@@ -95,7 +122,7 @@ const Choice = (props: Props) => {
                   <p>By choosing one of our partners, we can guarantee you ll get the best deals available.</p>
                 </div>
                 <div>
-                  <div className='border-[3px] border-red w-fit py-2 px-4 rounded-md text-sm lg:text-xl font-bold text-red cursor-pointer'> Compare cards</div>
+                  <a href='/form-loan' className='border-[3px] border-red w-fit py-2 px-4 rounded-md text-sm lg:text-xl font-bold text-red cursor-pointer'> Compare cards</a>
                 </div>
               </div>
             </div>

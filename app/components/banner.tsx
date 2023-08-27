@@ -4,6 +4,7 @@ import { HiUsers, HiShoppingBag } from 'react-icons/hi'
 import { AiFillCar } from 'react-icons/ai'
 import { BsFillCreditCard2BackFill } from 'react-icons/bs'
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 type Props = {}
 //https://coffeebreakloans.com/images/backgrounds/entry-bg--desktop.jpg
 
@@ -55,6 +56,7 @@ const mockData = [
 ]
 const Banner = (props: Props) => {
   const [currentContent, setCurrentContent] = useState(1)
+  const { push } = useRouter()
   return (
     <div>
       <div
@@ -119,7 +121,7 @@ const Banner = (props: Props) => {
             <div className='flex flex-col gap-4' dangerouslySetInnerHTML={{ __html: `${item.content}` }}></div>
             <div>
               <div className='flex flex-col items-center gap-3'>
-                <button className='bg-red p-3 rounded-md w-full text-white font-semibold'>{item.textBut}</button>
+                <a href='/form-loan' className='bg-red p-3 rounded-md w-full text-white font-semibold text-center' >{item.textBut}</a>
                 <div className='flex gap-6 items-center'>
                   <div className='flex gap-3 text-xs font-bold items-center'>
                     <div>
