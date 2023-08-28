@@ -53,3 +53,9 @@ body {
   transform: translate(-50%, -50%);
   transition: 0.3s;
 }
+
+.text-logo {
+  background: -webkit-linear-gradient(rgb(241, 185, 116), rgb(55, 38, 2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
