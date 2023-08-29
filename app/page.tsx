@@ -11,7 +11,7 @@ export default function Home() {
     template: "elvis-us",
   };
   return (
-    <main className='flex flex-col gap-24'>
+    <main className='flex flex-col lg:gap-24'>
       <Banner />
       <Protect />
       <Choice />

@@ -5,6 +5,7 @@ import { AiFillCar } from 'react-icons/ai'
 import { BsFillCreditCard2BackFill } from 'react-icons/bs'
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import AccordionBannerItem from './acrodoin-banner-item';
 type Props = {}
 //https://coffeebreakloans.com/images/backgrounds/entry-bg--desktop.jpg
 
@@ -18,7 +19,8 @@ const mockData = [
       <strong>Learn more about Personal Loans</strong>
     `,
     textBut: "Start Quick Form",
-    id: 1
+    id: 1,
+    image:'/img/user.png'
   },
   {
     title: "CREDIT CARDS",
@@ -29,7 +31,8 @@ const mockData = [
       <p></p>
     `,
     textBut: "Compare Options",
-    id: 2
+    id: 2,
+    image:'/img/card.png'
   },
   {
     title: "BUSINESS LOANS",
@@ -40,7 +43,8 @@ const mockData = [
       <p></p>
     `,
     textBut: "Compare Options",
-    id: 3
+    id: 3,
+    image:'/img/bag.png'
   },
   {
     title: "CAR INSURANCE",
@@ -51,7 +55,8 @@ const mockData = [
       <p></p>
     `,
     textBut: "Start Quick Form",
-    id: 4
+    id: 4,
+    image:'/img/car.png'
   },
 ]
 const Banner = (props: Props) => {
@@ -63,14 +68,21 @@ const Banner = (props: Props) => {
         className={`bg-[url('https://coffeebreakloans.com/images/backgrounds/entry-bg--desktop.jpg')] bg-cover p-24`}
       >
         <div className='text-center lg:w-[50%]'>
-          <div className='text-xl lg:text-4xl font-semibold text-white opacity-50 mb-6'>Discover your best</div>
+          <div className='text-xl lg:text-4xl font-semibold text-white opacity-50 mg:mb-6'>Discover your best</div>
           <div className='text-xl lg:text-7xl text-white font-semibold'>Personal </div>
           <div className='text-xl lg:text-7xl text-white font-semibold'>Finance Options </div>
         </div>
       </div>
 
       <div className='bg-[#ddc7a5]  h-full lg:h-32 flex justify-center relative'>
-        <div className='grid grid-cols-1 lg:grid-cols-4 gap-10 relative -top-10  '>
+        <div className='flex flex-col gap-3  relative -top-5 lg:hidden'>
+          {mockData.map((item, key) => (
+            <React.Fragment key={key}>
+              <AccordionBannerItem data={item} />
+            </React.Fragment>
+          ))}
+        </div >
+        <div className='lg:grid grid-cols-1 lg:grid-cols-4 gap-10 relative -top-10  hidden '>
           <div
             onClick={() => setCurrentContent(1)}
             className={`w-[160px] cursor-pointer h-[120px] rounded-lg text-brow bg-white p-3 font-semibold flex justify-center items-center flex-col gap-3 ${currentContent === 1 && '!bg-brow !text-white'}`}
@@ -111,7 +123,7 @@ const Banner = (props: Props) => {
         </div>
       </div>
 
-      <div>
+      <div className='hidden lg:block'>
         {mockData.map((item: any, key: any) => (
           <div key={key} className={` col-span-1 lg:grid-cols-3 gap-10 my-container pt-24  ${currentContent === item.id ? "grid" : "hidden"}`}>
             <div>

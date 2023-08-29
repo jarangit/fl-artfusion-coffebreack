@@ -43,18 +43,18 @@ const mockDataAD = [
 const Asked = (props: Props) => {
   return (
     <div>
-      <div className='grid grid-cols-1 lg:grid-cols-2 my-container gap-10'>
+      <div className='grid grid-cols-1 lg:grid-cols-2 my-container lg:gap-10'>
         <div>
-          < div className='w-3/4'>
-            <div className='text-5xl font-semibold mb-6'>Frequently Asked Questions</div>
-            <p>CoffeeBreakLoans.com is a digital platform offering a convenient way to connect you with reliable lenders or lending partners that would be able to provide you with the required funding.</p>
+          < div className='lg:w-3/4'>
+            <div className='text-xl lg:text-5xl font-semibold mb-6 text-center'>Frequently Asked Questions</div>
+            <p className='text-xs text-center'>CoffeeBreakLoans.com is a digital platform offering a convenient way to connect you with reliable lenders or lending partners that would be able to provide you with the required funding.</p>
           </div>
           <div className='mt-10'>
             <Image
               src={'/img/alone.png'}
               alt=''
-             width={500}
-             height={500}
+              width={500}
+              height={500}
             />
           </div>
         </div>
@@ -66,7 +66,7 @@ const Asked = (props: Props) => {
               </div>
             ))}
           </div>
-          <div className='border-[3px] border-red w-fit py-2 px-4 rounded-md text-xl font-bold text-red cursor-pointer'> See all FAQs</div>
+          <div className='border-[3px] border-red w-full lg:w-fit py-2 px-4 rounded-md text-xl font-bold text-red cursor-pointer'> See all FAQs</div>
         </div>
       </div>
     </div>

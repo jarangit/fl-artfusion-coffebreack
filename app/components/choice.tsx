@@ -19,7 +19,7 @@ const Choice = (props: Props) => {
   return (
     <div>
       <div className='my-container py-10'>
-        <div className='text-5xl font-semibold '>
+        <div className=' text-xl  lg:text-5xl font-semibold '>
           <div>The right choice</div>
           <div>to solve your</div>
           <div>needs</div>

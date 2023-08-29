@@ -6,7 +6,7 @@ type Props = {}
 
 const Menu = (props: Props) => {
   return (
-    <div className='flex justify-between my-container items-center  py-6'>
+    <div className='flex justify-between my-container items-center  py-2 lg:py-6'>
       <div className=''>
         <a href={'/'} className='flex  gap-1  justify-center'>
           <div>
@@ -19,7 +19,7 @@ const Menu = (props: Props) => {
           </div>
           <div>
             <div className='font-bold text-3xl text-logo'>CoffeeBreak</div>
-            <div className='text-2xl font-semibold text-[#A88C6A] relative -top-3'>loans<span className='text-gray font-medium text-xl text-[#D7D7D7]'>.com</span></div>
+            <div className='text-2xl font-semibold text-[#A88C6A] relative -top-3 h-fit'>loans<span className='text-gray font-medium text-xl text-[#D7D7D7]'>.com</span></div>
           </div>
         </a>
       </div>
